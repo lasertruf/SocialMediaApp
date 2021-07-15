@@ -1,0 +1,119 @@
+.pfp{
+    border-radius: 50%;
+    
+}
+
+button{
+    background-color: rgb(93, 99, 184);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: large;
+    border-radius: 2em;
+    height:40px;
+    width:300px;
+}
+
+.editbtn{
+    background-color: rgb(146, 149, 204);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: small;
+    border-radius: 1em;
+    height:30px;
+    width:100px;
+}
+
+.deletebtn{
+    background-color: rgb(221, 14, 14);
+    color: rgb(255, 255, 255);
+    
+    font-weight: bold;
+    font-size: small;
+    border-radius: 1em;
+   
+    height:30px;
+    width:100px;
+}
+
+.editdiv{
+    position: relative;
+    right:20px;
+}
+
+.closebtn{
+    background-color: rgb(221, 14, 14);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right:20px;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 1em;
+   
+    height:30px;
+    width:100px;
+}
+
+.postarea{
+    margin : 50% ;
+   
+
+}
+
+
+
+
+.wrapper{
+    padding: 30px;
+    padding-left: 25px;
+    padding-top: 50px;
+align-items: center;
+display: grid;
+grid-gap : 0px;
+}
+
+.welcome{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+}
+.wrapper-itm1{
+
+    min-height: 600px;
+    min-width: 600px;
+background-color: rgb(70, 69, 69);
+color: white;
+padding: 20px;
+}
+
+.wrapper-itm2{
+    
+    min-height: 600px;
+    min-width: 600px;
+    background-color: rgb(232, 236, 235);
+    color: grey;
+    padding: 20px;
+
+    }
+    
+    
+@media (min-width : 400px) {
+    .wrapper { grid-template-columns: repeat(1, 1fr);  } 
+
+}
+
+@media (min-width : 900px) {
+    .wrapper { grid-template-columns: repeat(1, 1fr);  } 
+
+}
+
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('../thbg.jpg');
+    background-size: cover;
+  }
+

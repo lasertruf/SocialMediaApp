@@ -1,0 +1,122 @@
+
+<div class="container" style="max-width: 550px">
+  <h2 class="text-center mb-5">Angular Social Media Project</h2>
+  <div *ngIf="isLoggedin === false">     
+    <button type="button" (click)="loginWithGoogle()" >Login with Google</button>
+</div>
+
+
+  
+ <div class= "welcome" *ngIf="isLoggedin === true" >
+  <div>
+  <img  class="pfp" src="{{socialUser.photoUrl}}" alt="">
+   {{socialUser.firstName}} {{socialUser.lastName}}
+  </div>
+
+  <!-- <section id="editsection">
+    
+  <div  *ngIf="Modal">
+    <form  #posttheForm="ngForm" >
+
+    
+        <h4 >Enter Title </h4>
+        <textarea input type="text"  name="title" rows="3" cols = 30 ngModel required > </textarea> 
+        
+        <h4>Enter Post</h4>
+        
+        <textarea input type="text"  name="content" rows="10" cols = 60 ngMOdel required  > </textarea>
+       
+        <br><br>
+        <button  (click)="onClickDo(posttheForm)"> SUBMIT </button>
+
+        
+    </form>  
+    </div>
+
+  </section> -->
+
+    <div class="wrapper" > 
+
+        <!-- wrapper item1 div  -->
+      <div class="wrapper-itm1" > 
+ 
+     <div  id = "formsection">
+       <form  [formGroup]="postdaForm"  >
+        
+        <div *ngIf="EditMode" class="editdiv"> <button (click)="onClose()" class="closebtn"> CLOSE</button> </div> 
+       
+       <h3> {{EditMode? 'Update Post': 'Add Post'}}</h3>
+           <h4 >Enter Title </h4>
+           <textarea input type="text"  formControlName="title" rows="3" cols = 30 required > </textarea> 
+           
+           <h4>Enter Post</h4>
+           
+           <textarea input type="text"  formControlName="content" rows="10" cols = 60  > </textarea>
+          
+           <br><br>
+           <button (click)="onClickDo()" > SUBMIT </button>
+           
+       </form>  
+       </div>
+ 
+     </div>
+       <!-- wrapper item1 div  -->
+     
+ 
+       <div class="wrapper-itm2">
+        <!-- <div *ngIf="titler!=null">
+     -->
+
+     <div *ngFor=" let p of postsarr">
+
+      <mat-card class="example-card" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{p.title}}</mat-card-title>
+          <mat-card-subtitle>Author: {{p.email}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+           {{p.content}}
+          
+          </p>
+        </mat-card-content>
+        <a href="#formsection"> <button type="button"  (click)="onEditPost(p)" class="editbtn">EDIT</button> </a>
+         
+          <button type="button"   (click)="onDeletePost(p._id)" class="deletebtn">DELETE</button>
+       
+      </mat-card>
+          
+      <hr>
+         <!-- <app-postslist></app-postslist> -->
+   
+        <!-- </div> -->
+    
+      </div>
+ 
+ 
+   </div>
+   <!-- div for wrapper -->
+    
+
+    <button type="button" (click)="logOut()" class="btn btn-primary">Log Out</button>
+  </div>
+</div>
+
+
+
+<!-- 
+<form  #postForm="ngForm">
+      
+  <h4>Enter Title </h4>
+  <textarea input type="text"  name="title" rows="3" cols = 30 ngModel required > </textarea> 
+  
+  <h4>Enter Post</h4>
+  
+  <textarea input type="text"  name="content" rows="10" cols = 60 ngModel required  > </textarea>
+ 
+  <br><br>
+  <button  (click)="onClickDo(postForm)"> SUBMIT </button>
+  
+</form>   -->
+
