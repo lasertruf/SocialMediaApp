@@ -1,6 +1,7 @@
 
 <div class="container" style="max-width: 550px">
-  <h2 class="text-center mb-5">Angular Social Media Project</h2>
+  <h2 class="texttitle">MEAN Stack Social Media Project</h2>
+  <hr><br>
   <div *ngIf="isLoggedin === false">     
     <button type="button" (click)="loginWithGoogle()" >Login with Google</button>
 </div>
@@ -11,6 +12,8 @@
   <div>
   <img  class="pfp" src="{{socialUser.photoUrl}}" alt="">
    {{socialUser.firstName}} {{socialUser.lastName}}
+   <br>
+   <button type="button" (click)="logOut()" class="logoutbtn">Log Out</button>
   </div>
 
   <!-- <section id="editsection">
@@ -99,7 +102,7 @@
    <!-- div for wrapper -->
     
 
-    <button type="button" (click)="logOut()" class="btn btn-primary">Log Out</button>
+    
   </div>
 </div>
 

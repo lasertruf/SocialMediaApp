@@ -53,7 +53,7 @@ export class PostService {
        return this.http.delete(deletepostvar);
     }
 
-    editPost(post:any){
+    editPost(post:Post){
         const Editpostvar = "/post/" + post._id + "/";
         console.log(post._id);
         const postdata : ThePost= {title : post.title, content : post.content}

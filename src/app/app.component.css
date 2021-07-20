@@ -23,6 +23,18 @@ button{
     width:100px;
 }
 
+.logoutbtn{
+    background-color: rgb(221, 14, 14);
+    color: rgb(255, 255, 255);
+    
+    font-weight: bold;
+    font-size: small;
+    border-radius: 1em;
+   
+    height:30px;
+    width:80px; 
+}
+
 .deletebtn{
     background-color: rgb(221, 14, 14);
     color: rgb(255, 255, 255);
@@ -59,6 +71,13 @@ button{
 
 }
 
+
+.texttitle{
+    
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
 
 
 

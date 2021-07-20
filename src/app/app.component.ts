@@ -6,6 +6,8 @@ import { PostService } from './posts.service';
 import { Post } from './post.model'; 
 import { VirtualTimeScheduler } from 'rxjs';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { invalid } from '@angular/compiler/src/render3/view/util';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -88,12 +90,12 @@ this.postService.getPostsfromDB().subscribe((res:any)=>{
 
 
   onClickDo(){
-    // if(this.postdaForm.invalid){
-    //   console.log("INVALID FORM");
+    if(this.postdaForm.value.title == '' || this.postdaForm.value.content == ''){
+      console.log("INVALID FORM");
       
-    //   return;
-    // }
-     // const post : Post = {
+      return;
+    }
+    //  const post : Post = {
      //   id : form.value.title,
      //   title : form.value.title,
      //   content : form.value.content
