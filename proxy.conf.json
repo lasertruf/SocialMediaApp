@@ -1,6 +1,8 @@
 {
     "/post": {
-        "target": "http://localhost:3000",
+        "target": "http://40.83.130.203:3000",
         "secure": false
     }
 }
+
+

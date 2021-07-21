@@ -11,6 +11,8 @@ export class PostService {
  private  posts : Post[] =[];
  private postsUpdated = new Subject<Post[]>();
 
+
+  url = 'http://40.83.130.203:3000/';
  constructor(private http : HttpClient){
 
  }
