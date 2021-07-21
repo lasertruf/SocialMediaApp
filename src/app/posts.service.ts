@@ -23,7 +23,7 @@ export class PostService {
     }
 
     getPostsfromDB(){
-        return this.http.get("/post");
+        return this.http.get("http://40.83.130.203:3000/");
     }
 
     getPostUpdateListener(){
@@ -41,12 +41,12 @@ export class PostService {
 
     addThePost( title : string, content : string, email:string){
         const postall : emailAndThePost = { title : title, content : content, email: email }; 
-         this.http.post("/post", postall).subscribe();
+         this.http.post("/post/", postall).subscribe();
     }
 
     add2ThePost( title: string, content: string){
         const postall : ThePost = {title : title, content: content}
-        this.http.post("/post", postall);
+        this.http.post("/post/", postall);
         console.log(postall);
     }
   
@@ -65,6 +65,9 @@ export class PostService {
     }
 
 }   
+
+
+// /post/
 
 
 
