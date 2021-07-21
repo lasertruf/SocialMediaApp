@@ -23,8 +23,7 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        npm install
-        ng add @angular/material
+        
         
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
