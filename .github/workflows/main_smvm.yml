@@ -51,4 +51,4 @@ jobs:
         app-name: 'smvm'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_1b48d8589aed4329ac099238e93b1ffb }}
-        package: ./dist/
+        package: .
