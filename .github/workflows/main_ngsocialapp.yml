@@ -24,10 +24,12 @@ jobs:
     - name: npm install
       run: |
         npm install
+        npm install -g @angular/cli
+        ng add @angular/material
         
     - name: mat and build
       run: |
-        npm mat
+        
         ng build --prod
     
     - name: Upload artifact for deployment job
