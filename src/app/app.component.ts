@@ -125,7 +125,7 @@ this.getPostsfromDB();
 
 onDeletePost(id:any){
   
-  if(confirm('Do you want to delete this post?'))
+  
 this.postService.deletePost(id).subscribe();
 this.getPostsfromDB();
 }
